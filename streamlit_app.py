@@ -23,9 +23,9 @@ from PIL import Image
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix, accuracy_score
 
-# # # Insert Pictures
-# # st.image("photo_2023")
+# # Insert Pictures
 # st.image("photo_2023.jpg")
+st.image("photo_2023.jpg")
 
 # Insert Heading and Subheading
 st.write("""
