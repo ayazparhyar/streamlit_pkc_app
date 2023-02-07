@@ -32,13 +32,13 @@ with st.sidebar:
     selected = option_menu(
         menu_title='Menu',
         options=['Data Download', 'About'],
-        icons=['file-arrow-down', 'book'],
+        icons=['file-arrow-down-fill', 'book'],
         menu_icon='hourglass-split',
         # default_index=0,
     )
 if selected == 'Data Download':
     st.markdown("""
-            1. Click the link below and right click raw button and tap Save link as.
+            1. Click the link below and right click raw button and tap **Save link as**.
             2. Select location and change the extention of file to .csv if the file is being downloaded as .txt.
             3. Upload the file in the sidebar to view pandas profiling report.
             [click here to download the heart attack dataset](https://github.com/ayazparhyar/streamlit_pkc_app/blob/main/heart.csv)"""
