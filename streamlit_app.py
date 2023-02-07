@@ -27,10 +27,30 @@ from sklearn.metrics import precision_score, recall_score, f1_score, confusion_m
 # st.image("photo_2023.jpg")
 # st.image("photo_2023.jpg")
 
+# Insert A Navbar
+with st.sidebar:
+    selected = option_menu(
+        menu_title='Menu',
+        options=['Data Download', 'About'],
+        icons=['file-arrow-down', 'book'],
+        menu_icon='hourglass-split',
+        # default_index=0,
+    )
+if selected == 'Data Download':
+    st.markdown("""
+            1. Click the link below and right click raw button and tap Save link as.
+            2. Select location and change the extention of file to .csv if the file is being downloaded as .txt.
+            3. Upload the file in the sidebar to view pandas profiling report.
+            [click here to download the heart attack dataset](https://github.com/ayazparhyar/streamlit_pkc_app/blob/main/heart.csv)"""
+                )
+elif selected == 'About':
+    st.write("""
+            #### Made with ❤️ by Qadir Shahbaz, Muhammad Ayaz, Muhammad Ali Farrukh & Muhammad Ali Butt :rocket:
+            CopyRight © 2023 PKC Team1 All Rights Reserved.""")
+
 # Insert Heading and Subheading
 st.write("""
-        # Heart Attack Analysis & Prediction
-        ## Made by Qadir Shahbaz, Muhammad Ayaz, Muhammad Ali Farrukh & Muhammad Ali Butt""")
+        # Heart Attack Analysis & Prediction :ambulance: """)
 
 # Insert sidebar to upload dataset to the streamlit app CSV format
 st.markdown("""
